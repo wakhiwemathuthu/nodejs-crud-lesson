@@ -1,1 +1,26 @@
-[{"name":"Mark","age":19,"password":"$2b$10$hl6k8qo/CBxw8RtOmfLwQ.WxPvkhPEqllFhqaLTL6p2MpeNIJtcTm","id":"37630e3b-46fd-4951-8dcb-3c6ef290ed61"},{"name":"Tony","age":16,"password":"$2b$10$tmIrMe4gF7KRE2OAbdkluuVr8idQd/nTNsf0SOnZtYTBAzFTnU9nu","id":"a75fa6d0-fadf-490d-8d10-15150df3667b"},{"name":"Naruto","age":32,"password":"$2b$10$JDyuETh3CDgghgeP9QGR6.pkzARN1V3VtxRBLik29Nf.ih4agHlF6","id":"46d3f7bc-6cd1-410b-86b5-f81c8ff580ea"},{"name":"Wakhiwe","age":18,"password":"$2b$10$vAsoFh5u4RI1thcaPWndNea.zM01XSNC6AYL21uFFXD3gbs179iwa","id":"6de5594f-8f61-443c-9083-38f7096399ae"}]
+[
+  {
+    "name": "Mark",
+    "age": 19,
+    "password": "$2b$10$hl6k8qo/CBxw8RtOmfLwQ.WxPvkhPEqllFhqaLTL6p2MpeNIJtcTm",
+    "id": "37630e3b-46fd-4951-8dcb-3c6ef290ed61"
+  },
+  {
+    "name": "Tony",
+    "age": 16,
+    "password": "$2b$10$tmIrMe4gF7KRE2OAbdkluuVr8idQd/nTNsf0SOnZtYTBAzFTnU9nu",
+    "id": "a75fa6d0-fadf-490d-8d10-15150df3667b"
+  },
+  {
+    "name": "Naruto",
+    "age": 32,
+    "password": "$2b$10$JDyuETh3CDgghgeP9QGR6.pkzARN1V3VtxRBLik29Nf.ih4agHlF6",
+    "id": "46d3f7bc-6cd1-410b-86b5-f81c8ff580ea"
+  },
+  {
+    "name": "Wakhiwe",
+    "age": 18,
+    "password": "$2b$10$vAsoFh5u4RI1thcaPWndNea.zM01XSNC6AYL21uFFXD3gbs179iwa",
+    "id": "6de5594f-8f61-443c-9083-38f7096399ae"
+  }
+]
