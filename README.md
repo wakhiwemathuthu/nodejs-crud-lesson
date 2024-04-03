@@ -43,12 +43,12 @@ User data is stored in `data/users.json` file.
 [
   {
     "id": "37630e3b-46fd-4951-8dcb-3c6ef290ed61",
-    "name": "John Doe",
+    "email": "john@gmail.com",
     "password": "$2b$10$hl6k8qo/CBxw8RtOmfLwQ.WxPvkhPEqllFhqaLTL6p2MpeNIJtcTm"
   },
   {
     "id": "6de5594f-8f61-443c-9083-38f7096399ae",
-    "name": "Jane Smith",
+    "email": "jane@gmail.com",
     "password": "$2b$10$vAsoFh5u4RI1thcaPWndNea.zM01XSNC6AYL21uFFXD3gbs179iwa"
   }
 ]

@@ -26,9 +26,9 @@ async function updateUser(req, res, next) {
     (user) => user.id !== req.params.id
   );
   const user = usersDB.users.find((user) => user.id === req.params.id);
-  const { name, age } = req.body;
-  if (name) {
-    user.name = name;
+  const { email, age } = req.body;
+  if (email) {
+    user.email = email;
   }
   if (age) {
     user.age = age;

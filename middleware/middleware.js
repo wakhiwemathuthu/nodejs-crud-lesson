@@ -1,7 +1,7 @@
 function validateUser(req, res, next) {
-  const { name, age, password } = req.body;
-  if (!name) {
-    return res.status(400).json({ message: "Name is required" });
+  const { email, age, password } = req.body;
+  if (!email) {
+    return res.status(400).json({ message: "Email is required" });
   }
   if (!age) {
     return res.status(400).json({ message: "Age is required" });
@@ -14,13 +14,14 @@ function validateUser(req, res, next) {
       .status(400)
       .json({ message: "Password must me more than 6 characters" });
   }
+  console.log("User has correct data");
   return next();
 }
 
 function validateSignIn(req, res, next) {
-  const { name, password } = req.body;
-  if (!name) {
-    return res.status(400).json({ message: "username is required to signin" });
+  const { email, password } = req.body;
+  if (!email) {
+    return res.status(400).json({ message: "Email is required to signin" });
   }
   if (!password) {
     return res

@@ -20,3 +20,14 @@
 2024-04-02 10:22	PUT	/users/0d341712-2a05-4126-8c27-4b3cc20db55d	Error: ENOENT: no such file or directory, open 'C:\Users\wakhi\OneDrive\Documents\NodeJS\test_project5\datajh\users.json'
 2024-04-02 10:23	PUT	/users/0d341712-2a05-4126-8c27-4b3cc20db55d	Error: ENOENT: no such file or directory, open 'C:\Users\wakhi\OneDrive\Documents\NodeJS\test_project5\datajh\users.json'
 2024-04-02 10:26	DELETE	/users/0d341712-2a05-4126-8c27-4b3cc20db55d	Error: ENOENT: no such file or directory, open 'C:\Users\wakhi\OneDrive\Documents\NodeJS\test_project5\datacc\users.json'
+2024-04-02 13:49	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON
+2024-04-02 13:50	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON
+2024-04-02 13:52	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON
+2024-04-02 13:53	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON
+2024-04-02 13:53	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON
+2024-04-02 14:03	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON
+2024-04-02 14:03	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON
+2024-04-02 14:03	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON
+2024-04-02 14:04	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON
+2024-04-02 14:05	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON
+2024-04-02 14:05	POST	/auth/register	SyntaxError: Unexpected token '-', "----------"... is not valid JSON

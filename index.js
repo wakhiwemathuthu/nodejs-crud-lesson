@@ -4,6 +4,7 @@ const path = require("path");
 const rootRouter = require("./routes/root");
 const usersRouter = require("./routes/api/users");
 const authRouter = require("./routes/auth");
+const accountActivation = require("./routes/account-activation");
 const cors = require("cors");
 const morgan = require("morgan");
 const fs = require("fs");
@@ -28,6 +29,7 @@ app.use(express.json());
 app.use(rootRouter);
 app.use("/users", usersRouter);
 app.use("/auth", authRouter);
+app.use("/account-activation", accountActivation);
 app.use(errorLogger);
 
 app.listen(PORT, () =>
