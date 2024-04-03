@@ -1,1 +1,9 @@
-[{"email":"wakhiwemathuthu6@gmail.com","age":18,"password":"$2b$10$qZBL8FdK7KGrTA8RfLMG..LxWjrntwNboT1Zf9mZEBCbQ0LNF9b1y","id":"6cc95e4a-8f58-4cde-83e7-23163e72279a","activated":true}]
+[
+  {
+    "email": "wakhiwemathuthu6@gmail.com",
+    "age": 18,
+    "password": "$2b$10$Xlw2JJRnZV1e.RTVVJSEoORTbTLFOXIIfPTBwilMYMjRlEkRvAsiG",
+    "id": "3c76eb7f-860c-46e8-a8de-44427f67eb71",
+    "activated": true
+  }
+]

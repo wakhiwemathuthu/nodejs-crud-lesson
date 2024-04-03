@@ -9,12 +9,15 @@ const fsPromises = require("fs").promises;
 const path = require("path");
 const { v4: uuid } = require("uuid");
 const nodemailer = require("nodemailer");
+require("dotenv").config();
+
+const PASS = process.env.NODE_MAILER_PASS;
 
 const transport = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: "wakhiwemathuthu6@gmail.com",
-    pass: "gqgk uqpo jdrl wseb",
+    pass: PASS,
   },
 });
 

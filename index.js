@@ -9,8 +9,9 @@ const cors = require("cors");
 const morgan = require("morgan");
 const fs = require("fs");
 const errorLogger = require("./utils/error-logger");
+require("dotenv").config();
 
-const PORT = 8080;
+const PORT = process.env.PORT;
 
 if (!fs.existsSync(path.join(__dirname, "Logs"))) {
   fs.mkdir(path.join(__dirname, "Logs"), (err) => {
