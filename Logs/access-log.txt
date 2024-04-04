@@ -1,6 +1,0 @@
-GET /users/ 200 1128 - 9.242 ms
-GET /users/ 403 13 - 2.482 ms
-GET /users/ 403 13 - 1.851 ms
-GET /users/ 403 13 - 1.828 ms
-GET /users/ 403 13 - 1.661 ms
-GET /users/ 403 13 - 1.665 ms

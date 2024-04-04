@@ -1,5 +1,5 @@
 GET http://localhost:8080/users/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMjI0MTYyLCJleHAiOjE3MTIyMjQxODJ9.oFexJbOy2CGOmBqIY0BDykYMMavdDxXDilz-JVfscxI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMjMwODcxLCJleHAiOjE3MTIyMzA4OTF9.MaxdCLja2vKX4BzIV_Uc23qr60go-bUGacw8ECEsTAY
 
 ###
 
@@ -27,5 +27,5 @@ GET http://localhost:8080/refresh-token/
 Content-Type: application/json
 
 {
-    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMjIxOTcwLCJleHAiOjE3MTIzMDgzNzB9.KOYparnul1BLH3VyAl8fCQybdnZg7gx46DzH0_j6qLQ"
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMjMwNzMxLCJleHAiOjE3MTIzMTcxMzF9.CLDdRYvE-VpB4RwcE0DcYaVS3YRXbJmAaFnXJ_tSWK4"
 }
