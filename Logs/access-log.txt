@@ -1,0 +1,5 @@
+GET /users/ 200 1128 - 9.151 ms
+GET /users/ 200 1128 - 3.991 ms
+GET /users/ 200 1128 - 2.115 ms
+GET /users/ 403 13 - 2.022 ms
+GET /users/ 403 13 - 1.862 ms
