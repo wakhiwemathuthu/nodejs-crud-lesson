@@ -1,5 +1,5 @@
 GET http://localhost:8080/users/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMjIwMzkzLCJleHAiOjE3MTIyMjA0MTN9.2RL4te2j9FC_vzcA3jtep5pvX1AicawXBHC9xVHMwvE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMjIxOTkxLCJleHAiOjE3MTIyMjIwMTF9.bsx3jtmNer2oKFLvYw5UrxaDd_ngGphSTzZUg7NRoyA
 
 ###
 
@@ -17,9 +17,9 @@ POST http://localhost:8080/auth/register/
 Content-Type: application/json
 
 {
-  "email":"rapamethyst@gmail.com",
+  "email":"wakhiwemathuthu6@gmail.com",
   "age":18,
-  "password":"rapamethyst"
+  "password":"wakhiwe"
 }
 
 ###
@@ -27,5 +27,5 @@ GET http://localhost:8080/refresh-token/
 Content-Type: application/json
 
 {
-    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMjE5ODkzLCJleHAiOjE3MTIzMDYyOTN9.3b2xh-P6wn7COTP-3nDgb5shhrzzOT21Jx7vmG8s4hE"
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMjIxOTcwLCJleHAiOjE3MTIzMDgzNzB9.KOYparnul1BLH3VyAl8fCQybdnZg7gx46DzH0_j6qLQ"
 }

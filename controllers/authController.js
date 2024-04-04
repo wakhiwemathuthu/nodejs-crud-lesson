@@ -94,7 +94,7 @@ async function signIn(req, res) {
     const refreshToken = jwt.sign({ email: user.email }, REFRESH_TOKEN_SECRET, {
       expiresIn: "1d",
     });
-    const updatedUser = { ...user, refreshToken,accessToken };
+    const updatedUser = { ...user, refreshToken, accessToken };
     usersDB.setUsers([...otherUsers, updatedUser]);
     try {
       await fsPromises.writeFile(

@@ -12,10 +12,18 @@ require("dotenv").config();
 const REFRESH_TOKEN_SECRET = process.env.REFRESH_TOKEN_SECRET;
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
 
-function refreshAccessToken(req, res) {
+function refreshAccessToken(req, res, next) {
   const { refreshToken } = req.body;
   if (!refreshToken) {
     return res.status(401).json({ message: "No refresh token was specified" });
+  }
+  const foundUser = usersDB.users.find(
+    (user) => user.refreshToken === refreshToken
+  );
+  if (!foundUser) {
+    return res
+      .status(404)
+      .json({ message: "No user with specified refresh token was found" });
   }
   jwt.verify(refreshToken, REFRESH_TOKEN_SECRET, async (err, decoded) => {
     if (err) {
@@ -42,6 +50,7 @@ function refreshAccessToken(req, res) {
       res.json({ accessToken });
     } catch (e) {
       console.error(e);
+      next(e);
     }
   });
 }
