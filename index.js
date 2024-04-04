@@ -10,6 +10,7 @@ const morgan = require("morgan");
 const fs = require("fs");
 const errorLogger = require("./utils/error-logger");
 require("dotenv").config();
+const refreshAccessTokenRouter = require("./routes/refresh-access-token");
 
 const PORT = process.env.PORT;
 
@@ -24,13 +25,14 @@ const ws = fs.createWriteStream(
 );
 
 app.use(morgan("tiny", { stream: ws }));
-app.use(cors({ origin: "https://freemelodies.co.za" }));
+app.use(cors({ origin: "*" }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(rootRouter);
 app.use("/users", usersRouter);
 app.use("/auth", authRouter);
 app.use("/account-activation", accountActivation);
+app.use("/refresh-token", refreshAccessTokenRouter);
 app.use(errorLogger);
 
 app.listen(PORT, () =>

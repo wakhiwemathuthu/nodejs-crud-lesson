@@ -10,6 +10,10 @@ const path = require("path");
 const { v4: uuid } = require("uuid");
 const nodemailer = require("nodemailer");
 require("dotenv").config();
+const jwt = require("jsonwebtoken");
+
+const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
+const REFRESH_TOKEN_SECRET = process.env.REFRESH_TOKEN_SECRET;
 
 const PASS = process.env.NODE_MAILER_PASS;
 
@@ -70,6 +74,7 @@ async function registerUser(req, res, next) {
 async function signIn(req, res) {
   const { email, password } = req.body;
   const user = usersDB.users.find((user) => user.email === email);
+  const otherUsers = usersDB.users.filter((user) => user.email !== email);
   if (!user) {
     return res
       .status(404)
@@ -83,7 +88,23 @@ async function signIn(req, res) {
   }
   const match = await bcrypt.compare(password, user.password);
   if (match) {
-    return res.json({ message: `User logged in: ${email}` });
+    const accessToken = jwt.sign({ email: user.email }, ACCESS_TOKEN_SECRET, {
+      expiresIn: "20s",
+    });
+    const refreshToken = jwt.sign({ email: user.email }, REFRESH_TOKEN_SECRET, {
+      expiresIn: "1d",
+    });
+    const updatedUser = { ...user, refreshToken,accessToken };
+    usersDB.setUsers([...otherUsers, updatedUser]);
+    try {
+      await fsPromises.writeFile(
+        path.join(__dirname, "..", "data", "users.json"),
+        JSON.stringify(usersDB.users)
+      );
+    } catch (e) {
+      console.log(e);
+    }
+    return res.json({ accessToken, refreshToken });
   } else {
     return res.status(401).json({ message: "incorrect password" });
   }

@@ -1,0 +1,31 @@
+GET http://localhost:8080/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMjIwMzkzLCJleHAiOjE3MTIyMjA0MTN9.2RL4te2j9FC_vzcA3jtep5pvX1AicawXBHC9xVHMwvE
+
+###
+
+POST http://localhost:8080/auth/signin/
+Content-Type: application/json
+
+{
+    "email":"wakhiwemathuthu6@gmail.com",
+    "password":"wakhiwe"
+}
+
+###
+
+POST http://localhost:8080/auth/register/
+Content-Type: application/json
+
+{
+  "email":"rapamethyst@gmail.com",
+  "age":18,
+  "password":"rapamethyst"
+}
+
+###
+GET http://localhost:8080/refresh-token/
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMjE5ODkzLCJleHAiOjE3MTIzMDYyOTN9.3b2xh-P6wn7COTP-3nDgb5shhrzzOT21Jx7vmG8s4hE"
+}
