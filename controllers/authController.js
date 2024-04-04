@@ -32,7 +32,7 @@ async function registerUser(req, res, next) {
     from: "wakhiwemathuthu6@gmail.com",
     to: req.body.email,
     subject: "Account activation",
-    text: `Follow this link to activate your account ---> http://localhost:8080/account-activation/${userId}`,
+    html: `<p>Follow this link to activate your account</p> <a href="http://localhost:8080/account-activation/${userId}">Link</a> `,
   };
   const { email, age, password } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
