@@ -34,23 +34,8 @@ function refreshAccessToken(req, res, next) {
       ACCESS_TOKEN_SECRET,
       { expiresIn: "20s" }
     );
-    const otherUsers = usersDB.users.filter(
-      (user) => user.email !== decoded.email
-    );
 
-    const updatedUser = { ...foundUser, accessToken };
-    
-    usersDB.setUsers([...otherUsers, updatedUser]);
-    try {
-      await fsPromises.writeFile(
-        path.join(__dirname, "..", "data", "users.json"),
-        JSON.stringify(usersDB.users)
-      );
-      res.json({ accessToken });
-    } catch (e) {
-      console.error(e);
-      next(e);
-    }
+    res.json({ accessToken });
   });
 }
 

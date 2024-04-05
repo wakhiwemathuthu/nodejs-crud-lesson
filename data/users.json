@@ -1,1 +1,10 @@
-[{"email":"rapamethyst@gmail.com","age":18,"password":"$2b$10$DEQt8k2jdwPk7tohjUrXjulKvGBvCR5ZTLqYdsfTWQXNRNFvonw6.","id":"828a79c4-3479-43f0-a5a6-472084d0ef85","activated":true,"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhcGFtZXRoeXN0QGdtYWlsLmNvbSIsImlhdCI6MTcxMjIzMzk4MiwiZXhwIjoxNzEyMzIwMzgyfQ.u3f2nxCx1S1hKvJPBXGGwM9Qpb5BjN_w-gWTlXpPIqc"},{"email":"wakhiwemathuthu6@gmail.com","age":18,"password":"$2b$10$tuNKO0s2VvA4fQJ6r/wdjOKgWySAkCmEuavAkjOvBWRCfTWNRqPZm","id":"4948585b-f734-4191-a691-36b74ab09275","activated":true,"refreshToken":"","accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMzI5NjY1LCJleHAiOjE3MTIzMjk2ODV9.l8yTbapIcuhz5skY14EEWKJj5B112jj7GbWEKNvi-cM"}]
+[
+  {
+    "email": "wakhiwemathuthu6@gmail.com",
+    "age": 18,
+    "password": "$2b$10$afdDQ2PFF7z67gFuNTfTzuaQJ2wwWC/Y7tVeGJ5ziarLK7KkB1w8u",
+    "id": "44f09b0a-915d-4e66-88f9-18990e51bd92",
+    "activated": true,
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMzMwNTU4LCJleHAiOjE3MTI0MTY5NTh9.qIIUAHzvaPegiz03P_hQPc-EwoADTnA8ccrwOwWlbjg"
+  }
+]
