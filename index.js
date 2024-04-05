@@ -12,6 +12,7 @@ const errorLogger = require("./utils/error-logger");
 require("dotenv").config();
 const refreshAccessTokenRouter = require("./routes/refresh-access-token");
 const cookieParser = require("cookie-parser");
+const logoutRouter = require("./routes/logout");
 
 const PORT = process.env.PORT;
 
@@ -35,6 +36,7 @@ app.use("/users", usersRouter);
 app.use("/auth", authRouter);
 app.use("/account-activation", accountActivation);
 app.use("/refresh-token", refreshAccessTokenRouter);
+app.use("/logout", logoutRouter);
 app.use(errorLogger);
 
 app.listen(PORT, () =>

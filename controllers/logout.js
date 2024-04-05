@@ -8,6 +8,8 @@ const fsPromises = require("fs").promises;
 const path = require("path");
 
 async function Logout(req, res, next) {
+  //Client must clear the accessToken
+
   const token = req.cookies.jwt;
   if (!token) {
     return res.sendStatus(204);

@@ -24,3 +24,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:8080/refresh-token/
+
+###
+
+DELETE http://localhost:8080/logout/
