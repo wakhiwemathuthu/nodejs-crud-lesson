@@ -1,0 +1,26 @@
+GET http://localhost:8080/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Indha2hpd2VtYXRodXRodTZAZ21haWwuY29tIiwiaWF0IjoxNzEyMzI4NTg3LCJleHAiOjE3MTIzMjg2MDd9.6VvhXAULb1AVBOvvEoBZC91TKJR7-u0LgPEBN4u6aVc
+
+###
+
+POST http://localhost:8080/auth/signin/
+Content-Type: application/json
+
+{
+    "email":"wakhiwemathuthu6@gmail.com",
+    "password":"wakhiwe"
+}
+
+###
+
+POST http://localhost:8080/auth/register/
+Content-Type: application/json
+
+{
+  "email":"wakhiwemathuthu6@gmail.com",
+  "age":18,
+  "password":"wakhiwe"
+}
+
+###
+GET http://localhost:8080/refresh-token/

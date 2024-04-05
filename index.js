@@ -11,6 +11,7 @@ const fs = require("fs");
 const errorLogger = require("./utils/error-logger");
 require("dotenv").config();
 const refreshAccessTokenRouter = require("./routes/refresh-access-token");
+const cookieParser = require("cookie-parser");
 
 const PORT = process.env.PORT;
 
@@ -28,6 +29,7 @@ app.use(morgan("tiny", { stream: ws }));
 app.use(cors({ origin: "*" }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
+app.use(cookieParser());
 app.use(rootRouter);
 app.use("/users", usersRouter);
 app.use("/auth", authRouter);

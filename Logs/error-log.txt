@@ -73,3 +73,5 @@
 2024-04-04 14:36	GET	/users/	TypeError: Cannot read properties of undefined (reading 'email')
 2024-04-04 14:36	GET	/users/	TypeError: Cannot read properties of undefined (reading 'email')
 2024-04-04 14:36	GET	/users/	TypeError: Cannot read properties of undefined (reading 'email')
+2024-04-05 16:50	GET	/users/	TypeError: Cannot read properties of undefined (reading 'email')
+2024-04-05 16:50	GET	/users/	TypeError: Cannot read properties of undefined (reading 'email')

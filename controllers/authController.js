@@ -94,17 +94,25 @@ async function signIn(req, res) {
     const refreshToken = jwt.sign({ email: user.email }, REFRESH_TOKEN_SECRET, {
       expiresIn: "1d",
     });
-    const updatedUser = { ...user, refreshToken, accessToken };
+    const updatedUser = { ...user, refreshToken };
     usersDB.setUsers([...otherUsers, updatedUser]);
     try {
       await fsPromises.writeFile(
         path.join(__dirname, "..", "data", "users.json"),
         JSON.stringify(usersDB.users)
       );
+      res.cookie("jwt", refreshToken, {
+        httpOnly: true,
+        maxAge: 24 * 60 * 60 * 1000,
+      });
+
+      return res.json({ accessToken });
     } catch (e) {
       console.log(e);
+      return res
+        .status(500)
+        .json({ message: "An eeror occured while writing ti file users.json" });
     }
-    return res.json({ accessToken, refreshToken });
   } else {
     return res.status(401).json({ message: "incorrect password" });
   }

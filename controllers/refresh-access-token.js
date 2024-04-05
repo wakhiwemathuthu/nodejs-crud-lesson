@@ -13,25 +13,22 @@ const REFRESH_TOKEN_SECRET = process.env.REFRESH_TOKEN_SECRET;
 const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
 
 function refreshAccessToken(req, res, next) {
-  const { refreshToken } = req.body;
+  const refreshToken = req.cookies.jwt;
   if (!refreshToken) {
-    return res.status(401).json({ message: "No refresh token was specified" });
+    return res.sendStatus(401);
   }
   const foundUser = usersDB.users.find(
     (user) => user.refreshToken === refreshToken
   );
+
   if (!foundUser) {
-    return res
-      .status(404)
-      .json({ message: "No user with specified refresh token was found" });
+    return res.sendStatus(403);
   }
   jwt.verify(refreshToken, REFRESH_TOKEN_SECRET, async (err, decoded) => {
-    if (err) {
-      return res.status(403).json({ message: "Invalid refresh token" });
+    if (err || foundUser.email !== decoded.email) {
+      return res.status(403);
     }
-    const user = usersDB.users.find(
-      (user) => user.refreshToken === refreshToken
-    );
+
     const accessToken = jwt.sign(
       { email: decoded.email },
       ACCESS_TOKEN_SECRET,
@@ -40,7 +37,9 @@ function refreshAccessToken(req, res, next) {
     const otherUsers = usersDB.users.filter(
       (user) => user.email !== decoded.email
     );
-    const updatedUser = { ...user, accessToken };
+
+    const updatedUser = { ...foundUser, accessToken };
+    
     usersDB.setUsers([...otherUsers, updatedUser]);
     try {
       await fsPromises.writeFile(
