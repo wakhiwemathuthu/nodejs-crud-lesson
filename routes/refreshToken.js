@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const refreshToken = require("../controllers/refreshToken");
 
-router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
+router.get("/", refreshToken);
 
 module.exports = router;
