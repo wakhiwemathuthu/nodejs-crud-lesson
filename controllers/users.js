@@ -38,7 +38,8 @@ async function updateUser(req, res, next) {
   usersDB.setUsers(usersDB.users);
   try {
     await fsPromises.writeFile(
-      path.join(__dirname, "..", "model", "users.json")
+      path.join(__dirname, "..", "model", "users.json"),
+      JSON.stringify(usersDB.users)
     );
     res.json({ message: "User updated successfully" });
   } catch (e) {
@@ -46,3 +47,28 @@ async function updateUser(req, res, next) {
     next(e);
   }
 }
+
+async function deleteUser(req, res, next) {
+  const username = req.params.id;
+  const foundUser = usersDB.users.find((user) => user.username === username);
+  if (!foundUser) {
+    return res
+      .status(404)
+      .json({ message: `The user you want to delete does not exist` });
+  }
+  const otherUsers = usersDB.users.filter(
+    (user) => user.username !== foundUser.username
+  );
+  usersDB.setUsers(otherUsers);
+  try {
+    await fsPromises.writeFile(
+      path.join(__dirname, "..", "model", "users.json"),
+      JSON.stringify(usersDB.users)
+    );
+  } catch (e) {
+    console.log(e);
+    next(e);
+  }
+}
+
+module.exports = { getAllUsers, getUser, updateUser, deleteUser };
