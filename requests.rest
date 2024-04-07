@@ -1,34 +1,34 @@
-POST http://localhost:8080/signup/
+POST http://localhost:8080/signup
 Content-Type: application/json
 
 {
-"username":"john",
+"username":"test",
 "password":"123456"
 }
 
 ###
 
-POST http://localhost:8080/signin/
+POST http://localhost:8080/signin
 Content-Type: application/json
 
 {
-    "username":"john",
+    "username":"test",
     "password":"123456"
 }
 
 ###
 
-DELETE  http://localhost:8080/logout/
+DELETE  http://localhost:8080/logout
 
 ###
 
-GET http://localhost:8080/refresh-token/
+GET http://localhost:8080/refresh-token
 
 ###
 
-POST http://localhost:8080/posts/
+POST http://localhost:8080/posts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3MTI0Mjg3NzgsImV4cCI6MTcxMjQyODgwOH0.pLi8douDyJdLOlc8JJ6DbxeL0yh6_SQBlTMPzJBz9uw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3MTI0OTcwMjgsImV4cCI6MTcxMjQ5NzA1OH0.B9_sfytpJ5tXeRn8bO8e_f_2A6kr3KZ3dyvOcWnp51Q
 
 {
     "title":"Dogs",
@@ -37,17 +37,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impva
 
 ###
 
-GET http://localhost:8080/posts/
+GET http://localhost:8080/posts
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3MTI0Mjg4MjIsImV4cCI6MTcxMjQyODg1Mn0.9WfkIpviwnra74anOfwsUbe6jW_n9mwcDIRJuW9tfTI
 
 ###
 
-GET http://localhost:8080/posts/919f012c-7357-4444-ac91-a3b3a9666611/
+GET http://localhost:8080/posts/919f012c-7357-4444-ac91-a3b3a9666611
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3MTI0MjUxOTYsImV4cCI6MTcxMjQyNTIyNn0.Xou-bEcergIVwmsuTSYGDRD2Z2quB6hL1T9lcV9dP0I
 
 ###
 
-PUT http://localhost:8080/posts/919f012c-7357-4444-ac91-a3b3a9666611/
+PUT http://localhost:8080/posts/919f012c-7357-4444-ac91-a3b3a9666611
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3MTI0MjUxOTYsImV4cCI6MTcxMjQyNTIyNn0.Xou-bEcergIVwmsuTSYGDRD2Z2quB6hL1T9lcV9dP0I
 
@@ -58,5 +58,30 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impva
 
 ###
 
-DELETE http://localhost:8080/posts/cad90214-a470-4381-af11-8939be451954/
+DELETE http://localhost:8080/posts/cad90214-a470-4381-af11-8939be451954
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Indha2hpd2UiLCJpYXQiOjE3MTI0MjUwMTEsImV4cCI6MTcxMjQyNTA0MX0.ZCFU8QVMV2WHZNH3YA3TBKfaV13GmtIJtK44HQ4XQx0
+
+###
+
+GET http://localhost:8080/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE3MTI0OTk0MzksImV4cCI6MTcxMjQ5OTQ2OX0.9oFMpk7UklsgnVX2bEAaKlohEykpM6AQUxgzrTRwcP8
+
+###
+
+GET http://localhost:8080/users/wakhiwe
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Indha2hpd2UiLCJpYXQiOjE3MTI0OTgyMjMsImV4cCI6MTcxMjQ5ODI1M30.WBHRY8Pl2DR4mpBQC1rO1mzqWPxTyCKRmBoQjOP1y9Y
+
+###
+
+PUT http://localhost:8080/users/wakhiwe
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Indha2hpd2UiLCJpYXQiOjE3MTI0OTgyMjMsImV4cCI6MTcxMjQ5ODI1M30.WBHRY8Pl2DR4mpBQC1rO1mzqWPxTyCKRmBoQjOP1y9Y
+
+{
+    "username":"wakhiwe"
+}
+
+###
+
+DELETE http://localhost:8080/users/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE3MTI1MDA1NzcsImV4cCI6MTcxMjUwMDYwN30.l1zocM0wLL70oV3Jqeo2k3d-JnSJCdaorMTnW41sZNU

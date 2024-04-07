@@ -1,12 +1,1 @@
-[
-  {
-    "username": "wakhiwe",
-    "password": "$2b$10$CqVY7QWzIQfutHgYv.ZA5eyWzvT0jRWV01bqi78/DY9k.PsHqvjJ6",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Indha2hpd2UiLCJpYXQiOjE3MTI0MjUwMTEsImV4cCI6MTcxMjUxMTQxMX0.Xp1w3-jxfMNrRGtpCe9-O5TB13GhBXVotw8sGjFyD_0"
-  },
-  {
-    "username": "john",
-    "password": "$2b$10$C6mprEhSuVZvK0aqk3xDLOMo1JW5iSs9pecOdUFQs3XMU6LPayIHC",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3MTI0MjUwODIsImV4cCI6MTcxMjUxMTQ4Mn0.0FlYh0CRZQjmhyKOlswWYgoMVHqG3ihHeDhyTx4c_-c"
-  }
-]
+[{"username":"john","password":"$2b$10$C6mprEhSuVZvK0aqk3xDLOMo1JW5iSs9pecOdUFQs3XMU6LPayIHC","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJpYXQiOjE3MTI0OTcwNjMsImV4cCI6MTcxMjU4MzQ2M30.PFyPLulxTp3vuW0iGgecHaoHr_jfKTVsMP2_T1-GPcY"},{"username":"wakhiwe","password":"$2b$10$CqVY7QWzIQfutHgYv.ZA5eyWzvT0jRWV01bqi78/DY9k.PsHqvjJ6","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Indha2hpd2UiLCJpYXQiOjE3MTI0OTk0MjYsImV4cCI6MTcxMjU4NTgyNn0.kBxGcvWhHfxX8fN3zcdYKkY2aNlpmZJC8t3Hb3wpO8E"}]

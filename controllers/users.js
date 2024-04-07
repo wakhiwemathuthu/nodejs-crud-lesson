@@ -34,7 +34,7 @@ async function updateUser(req, res, next) {
       .status(404)
       .json({ message: `Cant update non existing user: ${username}` });
   }
-  foundUser.username = username;
+  foundUser.username = user.username;
   usersDB.setUsers(usersDB.users);
   try {
     await fsPromises.writeFile(
@@ -65,6 +65,8 @@ async function deleteUser(req, res, next) {
       path.join(__dirname, "..", "model", "users.json"),
       JSON.stringify(usersDB.users)
     );
+    res.cookie("jwt", "", { httpOnly: true });
+    res.sendStatus(204);
   } catch (e) {
     console.log(e);
     next(e);
