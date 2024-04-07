@@ -31,9 +31,10 @@ async function signIn(req, res, next) {
   if (!match) {
     return res.status(400).json({ message: "incorrect password" });
   }
+  const roles = Object.values(foundUser.roles);
 
   const accessToken = jwt.sign(
-    { username: foundUser.username },
+    { userInfo: { username: foundUser.username, roles } },
     ACCESS_TOKEN_SECRET,
     { expiresIn: "30s" }
   );

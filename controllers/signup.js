@@ -19,7 +19,11 @@ async function signUp(req, res, next) {
   }
 
   const hashedPass = await bcrypt.hash(password, 10);
-  const user = { username, password: hashedPass };
+  const user = {
+    username,
+    password: hashedPass,
+    roles: { user: 100610 },
+  };
   usersDB.setUsers([...usersDB.users, user]);
   try {
     await fsPromises.writeFile(

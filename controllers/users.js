@@ -65,7 +65,6 @@ async function deleteUser(req, res, next) {
       path.join(__dirname, "..", "model", "users.json"),
       JSON.stringify(usersDB.users)
     );
-    res.cookie("jwt", "", { httpOnly: true });
     res.sendStatus(204);
   } catch (e) {
     console.log(e);

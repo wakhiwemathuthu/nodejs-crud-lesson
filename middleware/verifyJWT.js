@@ -13,7 +13,7 @@ function verifyJWT(req, res, next) {
     if (err) {
       return res.sendStatus(401);
     }
-    req.user = decoded.username;
+    req.userInfo = decoded.userInfo;
     next();
   });
 }

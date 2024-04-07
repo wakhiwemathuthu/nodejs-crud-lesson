@@ -11,13 +11,13 @@ const postsDB = {
 
 async function createPost(req, res, next) {
   const { title, message } = req.body;
-  const user = req.user;
+  const userInfo = req.userInfo;
   const post = {
     title,
     message,
     id: uuid(),
     createdAt: format(new Date(), "yyyy-MM-dd HH:mm"),
-    createdBy: user,
+    createdBy: userInfo.username,
   };
   postsDB.setPosts([...postsDB.posts, post]);
   try {
@@ -48,7 +48,7 @@ function getPost(req, res) {
 }
 
 async function updatePost(req, res, next) {
-  const user = req.user;
+  const userInfo = req.userInfo;
   const postId = req.params.id;
   const { title, message } = req.body;
   const foundPost = postsDB.posts.find((post) => post.id === postId);
@@ -57,7 +57,7 @@ async function updatePost(req, res, next) {
       .status(404)
       .json({ message: `No post was found with id: ${postId}` });
   }
-  if (foundPost.createdBy !== user) {
+  if (foundPost.createdBy !== userInfo.username) {
     return res
       .status(406)
       .json({ message: "You cant edit posts that belong to other users" });
@@ -84,14 +84,14 @@ async function updatePost(req, res, next) {
 
 async function deletePost(req, res, next) {
   const postId = req.params.id;
-  const user = req.user;
+  const userInfo = req.userInfo;
   const foundPost = postsDB.posts.find((post) => post.id === postId);
   if (!foundPost) {
     return res
       .status(404)
       .json({ message: "The post you want to delete does not exist" });
   }
-  if (foundPost.createdBy !== user) {
+  if (foundPost.createdBy !== userInfo.username) {
     return res
       .status(406)
       .json({ message: "You cant delete a post that belongs to other users" });
