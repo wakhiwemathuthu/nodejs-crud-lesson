@@ -7,6 +7,7 @@ const signInRouter = require("./routes/signin");
 const logOutRouter = require("./routes/logout");
 const refreshTokenRouter = require("./routes/refreshToken");
 const postsRouter = require("./routes/posts");
+const usersRouter = require("./routes/users");
 const verifyJWT = require("./middleware/verifyJWT");
 const errorLogger = require("./utils/errorLogger");
 
@@ -20,6 +21,7 @@ app.use("/logout", logOutRouter);
 app.use("/refresh-token", refreshTokenRouter);
 app.use(verifyJWT);
 app.use("/posts", postsRouter);
+app.use("/users", usersRouter);
 app.use(errorLogger);
 
 app.listen(PORT, () =>
