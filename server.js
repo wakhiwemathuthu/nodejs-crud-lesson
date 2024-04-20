@@ -10,11 +10,13 @@ const postsRouter = require("./routes/posts");
 const usersRouter = require("./routes/users");
 const verifyJWT = require("./middleware/verifyJWT");
 const errorLogger = require("./utils/errorLogger");
+const cors = require("cors");
 
 const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors({ origin: "*" }));
 app.use("/signup", signUpRouter);
 app.use("/signin", signInRouter);
 app.use("/logout", logOutRouter);
