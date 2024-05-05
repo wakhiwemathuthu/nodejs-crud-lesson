@@ -28,7 +28,7 @@ GET http://localhost:8080/refresh-token
 
 POST http://localhost:8080/posts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJ1c2VybmFtZSI6Indha2hpd2UiLCJyb2xlcyI6WzEwMDYxMF19LCJpYXQiOjE3MTI1MTgwOTMsImV4cCI6MTcxMjUxODEyM30.90opt5qs9pAt5KiD20iryWCi5N_-r_C8_1a6qhcEHVg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJ1c2VybmFtZSI6Indha2hpd2UiLCJyb2xlcyI6WzEwMDYxMF19LCJpYXQiOjE3MTQ5MjkwNDksImV4cCI6MTcxNDkyOTA3OX0.HJoopyS16aBk7U67N-n2FUftv1xl0libX6c7mw9DwT0
 
 {
     "title":"Dogs",
@@ -38,7 +38,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJ1c
 ###
 
 GET http://localhost:8080/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJ1c2VybmFtZSI6Indha2hpd2UiLCJyb2xlcyI6eyJ1c2VyIjoxMDA2MTB9fSwiaWF0IjoxNzEyNTE3OTczLCJleHAiOjE3MTI1MTgwMDN9.yDWSo-qx7JUxYQj39Jhfrv1hycLXHfb4UgleTptevNE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJ1c2VybmFtZSI6Indha2hpd2UiLCJyb2xlcyI6WzEwMDYxMF19LCJpYXQiOjE3MTQ5MjkyMDMsImV4cCI6MTcxNDkyOTIzM30.UVgYTcojT8f8PhnU4szoUkPqnBIT2nb7oZoQ6_sfZHg
 
 ###
 
@@ -58,8 +58,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJ1c
 
 ###
 
-DELETE http://localhost:8080/posts/cad90214-a470-4381-af11-8939be451954
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Indha2hpd2UiLCJpYXQiOjE3MTI0MjUwMTEsImV4cCI6MTcxMjQyNTA0MX0.ZCFU8QVMV2WHZNH3YA3TBKfaV13GmtIJtK44HQ4XQx0
+DELETE http://localhost:8080/posts/bdf3f5cb-1a14-4d14-97f0-d1aea8b1b5f9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mbyI6eyJ1c2VybmFtZSI6Indha2hpd2UiLCJyb2xlcyI6WzEwMDYxMF19LCJpYXQiOjE3MTQ5MjkxNTAsImV4cCI6MTcxNDkyOTE4MH0.g04ielWompe4PFuYgEv0XofO10wnRd_ALliKBnmHbQQ
 
 ###
 

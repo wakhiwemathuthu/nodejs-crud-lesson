@@ -1,16 +1,1 @@
-[
-  {
-    "title": "Stars",
-    "message": "stars are beutiful",
-    "id": "919f012c-7357-4444-ac91-a3b3a9666611",
-    "createdAt": "2024-04-06 19:37",
-    "createdBy": "wakhiwe"
-  },
-  {
-    "title": "Dogs",
-    "message": "dogs are adorable pets",
-    "id": "693ef05d-743f-4b3a-93aa-f6d574aacf09",
-    "createdAt": "2024-04-06 19:39",
-    "createdBy": "john"
-  }
-]
+[{"title":"Stars","message":"stars are beutiful","id":"919f012c-7357-4444-ac91-a3b3a9666611","createdAt":"2024-04-06 19:37","createdBy":"wakhiwe"},{"title":"Dogs","message":"dogs are adorable pets","id":"693ef05d-743f-4b3a-93aa-f6d574aacf09","createdAt":"2024-04-06 19:39","createdBy":"john"}]
